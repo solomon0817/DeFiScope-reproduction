@@ -95,6 +95,7 @@ SUPPORTED_NETWORK = {
         "symbol": "WBNB",
     },
 }
+```
 ---
 
 ## 🚀 运行检测 (Usage)
