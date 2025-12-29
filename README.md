@@ -10,7 +10,7 @@
 下载本项目代码到本地：
 
 ```bash
-git clone <你的仓库地址>
+git clone https://github.com/solomon0817/DeFiScope-reproduction
 cd DeFiScope-Reproduction
 ```
 
@@ -56,7 +56,7 @@ export OPENAI_API_KEY='sk-your-api-key-here'
 ```powershell
 $env:OPENAI_API_KEY='sk-your-api-key-here'
 ```
-## 2. 配置区块链节点与浏览器 Key (关键)
+### 2. 配置区块链节点与浏览器 Key (关键)
 
 为了确保程序能顺利拉取链上数据和合约源码，请编辑 `utils/config.py`，配置节点地址和 API Key。
 
