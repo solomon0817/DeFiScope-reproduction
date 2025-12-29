@@ -74,7 +74,7 @@ SUPPORTED_NETWORK = {
         "api_prefix": ".etherscan.io", 
         "key_command": "--etherscan-apikey", 
         
-        # [关键] Etherscan V2 API Key (通用 Key)
+        # Etherscan V2 API Key (通用 Key)
         "api_key": "YOUR_ETHERSCAN_V2_KEY",
         
         "stable_coin": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", 
@@ -88,7 +88,7 @@ SUPPORTED_NETWORK = {
         "api_prefix": ".bscscan.com", 
         "key_command": "--etherscan-apikey",
         
-        # [关键] Etherscan V2 API Key (此处填入与上面相同的 Key 即可)
+        # Etherscan V2 API Key (此处填入与上面相同的 Key 即可)
         "api_key": "YOUR_ETHERSCAN_V2_KEY",
         
         "stable_coin": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c", 
@@ -104,7 +104,7 @@ SUPPORTED_NETWORK = {
 
 ### 命令格式
 ```bash
-python main.py -tx <交易哈希> -bp <链ID>
+python main.py -tx <交易哈希> -bp <平台名称>
 ```
 
 * **`-tx`**: 待检测的交易哈希 (Transaction Hash)
