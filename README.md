@@ -44,7 +44,7 @@ pip install -r requirements.txt
 
 ## ⚙️ 配置 (Configuration)
 
-### 1. 设置 OpenAI API Key (必选)
+### 1. 设置 OpenAI API Key 
 由于本项目使用 OpenAI 模型（如 GPT-4o）进行推理，运行前必须配置环境变量。
 
 **Linux / macOS:**
@@ -56,7 +56,7 @@ export OPENAI_API_KEY='sk-your-api-key-here'
 ```powershell
 $env:OPENAI_API_KEY='sk-your-api-key-here'
 ```
-### 2. 配置区块链节点与浏览器 Key (关键)
+### 2. 配置区块链节点与浏览器 Key 
 
 为了确保程序能顺利拉取链上数据和合约源码，请编辑 `utils/config.py`，配置节点地址和 API Key。
 
@@ -97,7 +97,7 @@ SUPPORTED_NETWORK = {
 }
 ---
 
-### 🚀 运行检测 (Usage)
+## 🚀 运行检测 (Usage)
 
 使用 `main.py` 脚本对特定交易进行检测。
 
