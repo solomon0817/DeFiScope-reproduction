@@ -44,7 +44,8 @@ pip install -r requirements.txt
 
 ## ⚙️ 配置 (Configuration)
 
-由于本项目使用 OpenAI 模型（如 GPT-4o）进行推理，运行前必须配置 API Key。
+### 1. 设置 OpenAI API Key (必选)
+由于本项目使用 OpenAI 模型（如 GPT-4o）进行推理，运行前必须配置环境变量。
 
 **Linux / macOS:**
 ```bash
@@ -55,7 +56,45 @@ export OPENAI_API_KEY='sk-your-api-key-here'
 ```powershell
 $env:OPENAI_API_KEY='sk-your-api-key-here'
 ```
+## 2. 配置区块链节点与浏览器 Key (关键)
 
+为了确保程序能顺利拉取链上数据和合约源码，请编辑 `utils/config.py`，配置节点地址和 API Key。
+
+**注意**：目前 Etherscan V1 接口已禁用，请使用 Etherscan V2 通用 API Key。请在 ETH 和 BSC 的配置中填入同一个 Key。
+
+```python
+# utils/config.py
+
+SUPPORTED_NETWORK = {
+    "ethereum": {
+        "name": "mainnet", 
+        "chain_id": "1",
+        # 推荐使用 Infura, Alchemy 或 QuickNode (需支持归档模式)
+        "quick_node": "",
+        "api_prefix": ".etherscan.io", 
+        "key_command": "--etherscan-apikey", 
+        
+        # [关键] Etherscan V2 API Key (通用 Key)
+        "api_key": "YOUR_ETHERSCAN_V2_KEY",
+        
+        "stable_coin": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", 
+        "symbol": "WETH",
+    },
+    "bsc": {
+        "name": "bsc", 
+        "chain_id": "56",
+        # BSC 节点地址
+        "quick_node": "",
+        "api_prefix": ".bscscan.com", 
+        "key_command": "--etherscan-apikey",
+        
+        # [关键] Etherscan V2 API Key (此处填入与上面相同的 Key 即可)
+        "api_key": "YOUR_ETHERSCAN_V2_KEY",
+        
+        "stable_coin": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c", 
+        "symbol": "WBNB",
+    },
+}
 ---
 
 ## 🚀 运行检测 (Usage)
